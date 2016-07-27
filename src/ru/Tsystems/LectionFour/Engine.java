@@ -59,28 +59,18 @@ public class Engine {
         gary.setName("Gary");
         gary.setDogs(buddy);
 
-        System.out.print(bill.getName() + "'s dogs are: ");
-        if(Print.getIsEmpty(bill)) {
-            System.out.print("no dogs found");
-        } else {
-            Print.printDogsList(bill);
-        }
+        Print.printDogsListForOwner(bill);
 
-        System.out.println("");
+        Print.printDogsListForOwner(gary);
 
-        System.out.print(gary.getName() + "'s dogs are: ");
-        if(Print.getIsEmpty(gary)) {
-            System.out.print("no dogs found.");
-        } else {
-            Print.printDogsList(gary);
-        }
+        buddy.bark();
     }
 }
 
 class Print {
     private static Boolean isEmpty = true;
 
-    static Boolean getIsEmpty(Owner owner) {
+    private static Boolean getIsEmpty(Owner owner) {
         for (int i = 0; i < owner.getDogs().length; i++) {
             if (owner.getDogs()[i] != null) {
                 isEmpty = false;
@@ -90,7 +80,11 @@ class Print {
         return isEmpty;
     }
 
-    static void printDogsList(Owner owner) {
+    private static void printNoDogs() {
+        System.out.print("no dogs found.");
+    }
+
+    private static void printDogsList(Owner owner) {
         for (int i = 0; i < owner.getDogs().length; i++) {
             if (owner.getDogs()[i] != null) {
                 if (i < owner.getDogs().length - 1) {
@@ -100,5 +94,15 @@ class Print {
                 }
             }
         }
+    }
+
+    static void printDogsListForOwner(Owner owner) {
+        System.out.print(owner.getName() + "'s dogs are: ");
+        if(Print.getIsEmpty(owner)) {
+            Print.printNoDogs();
+        } else {
+            Print.printDogsList(owner);
+        }
+        System.out.println("");
     }
 }
