@@ -4,12 +4,10 @@ package ru.Tsystems.LectionFour;
  * Created by enaimark on 27.07.2016.
  */
 class Dog {
-    private String dogName; // name
-    private int age; // age
-    private String breed; // breed
+    private String dogName;
+    private int age;
+    private String breed;
     private Owner owner;
-    private Boolean hasOwner = false;
-
 
     void setDogName(String setDogName) {
         dogName = setDogName;
@@ -35,21 +33,16 @@ class Dog {
         return breed;
     }
 
-    void setOwner(Owner setOwner) {
-        if (hasOwner) {
-            System.out.println("Unable to add " + setOwner.getName() + " as an owner: " + this.dogName + " already has an owner");
+    void setOwner(Owner newOwner) {
+        if (owner != null) {
+            System.out.println("Unable to add " + newOwner.getName() + " as an owner: " + this.dogName + " already has an owner");
         } else {
-            owner = setOwner;
-            hasOwner = true;
+            owner = newOwner;
         }
     }
 
     Owner getOwner() {
         return owner;
-    }
-
-    boolean getHasOwner() {
-        return hasOwner;
     }
 
     void bark() {

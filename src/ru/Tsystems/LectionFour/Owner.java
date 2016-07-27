@@ -18,7 +18,7 @@ class Owner {
     private int nextIndex = 0; //keep track of elements in the dogs array
     void addDog(Dog dog) {
         if (nextIndex < dogs.length) {
-            if (dog.getHasOwner()) {
+            if (dog.getOwner() != null) {
                     System.out.println("Cannot add " + dog.getDogName() + " to " + this.getName() + ": already has an owner");
                 } else {
                     dogs[nextIndex] = dog.getDogName();
