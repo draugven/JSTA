@@ -7,7 +7,7 @@ class Dog {
     private String dogName; // name
     private int age; // age
     private String breed; // breed
-    private String ownerName;
+    private Owner owner;
     private Boolean hasOwner = false;
 
 
@@ -41,19 +41,19 @@ class Dog {
         return breed;
     }
 
-    //set owner's name
-    void setOwnerName(String setOwnerName) {
+    //set owner
+    void setOwner(Owner setOwner) {
         if (hasOwner) {
-            System.out.println("Unable to add " + setOwnerName + " as an owner: " + this.dogName + " already has an owner");
+            System.out.println("Unable to add " + setOwner.getName() + " as an owner: " + this.dogName + " already has an owner");
         } else {
-            ownerName = setOwnerName;
+            owner = setOwner;
             hasOwner = true;
         }
     }
 
-    //get owner's name
-    String getOwnerName() {
-        return ownerName;
+    //get owner
+    Owner getOwner() {
+        return owner;
     }
 
     //get if the dog has an owner
