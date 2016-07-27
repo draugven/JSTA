@@ -47,17 +47,17 @@ public class Engine {
         Owner bill = new Owner();
 
         bill.setName("Bill");
-        /*bill.setDogs(sparky);
-        bill.setDogs(buddy);
-        bill.setDogs(daisy);
-        bill.setDogs(max);
-        bill.setDogs(charlie);
-        bill.setDogs(edward);*/
+        /*bill.addDog(sparky);
+        bill.addDog(buddy);
+        bill.addDog(daisy);
+        bill.addDog(max);
+        bill.addDog(charlie);
+        bill.addDog(edward);*/
 
         Owner gary = new Owner();
 
         gary.setName("Gary");
-        gary.setDogs(buddy);
+        gary.addDog(buddy);
 
         Print.printDogsListForOwner(bill);
 
