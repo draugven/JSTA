@@ -87,10 +87,11 @@ class Print {
     private static void printDogsList(Owner owner) {
         for (int i = 0; i < owner.getDogs().length; i++) {
             if (owner.getDogs()[i] != null) {
-                if (i < owner.getDogs().length - 1) {
-                    System.out.print(owner.getDogs()[i] + ", ");
+                System.out.print(owner.getDogs()[i]);
+                if (owner.getDogs()[i+1] != null) {
+                    System.out.print(", ");
                 } else {
-                    System.out.print(owner.getDogs()[i] + ".");
+                    System.out.print(".");
                 }
             }
         }
