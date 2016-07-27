@@ -5,32 +5,39 @@ package ru.Tsystems.LectionFour;
  */
 class Owner {
     private String name;
-    private String[] dogs = new String[5];
+    private Dog[] dogs = new Dog[5];
 
-    void setName(String setName) {
-        name = setName;
-    }
-
-    String getName() {
+    public String getName() {
         return name;
     }
 
-    private int nextIndex = 0; //keep track of elements in the dogs array
-    void addDog(Dog dog) {
-        if (nextIndex < dogs.length) {
-            if (dog.getOwner() != null) {
-                    System.out.println("Cannot add " + dog.getDogName() + " to " + this.getName() + ": already has an owner");
-                } else {
-                    dogs[nextIndex] = dog.getDogName();
-                    nextIndex++;
-                    dog.setOwner(this);
-                }
-            } else {
-            System.out.println("Cannot add " + dog.getDogName() + ": " + this.getName() + " already has the maximum of 5 dogs");
-            }
+    public void setName(String name) {
+        this.name = name;
     }
 
-    String[] getDogs() {
+    public Dog[] getDogs() {
         return dogs;
+    }
+
+    public void setDogs(Dog[] dogs) {
+        this.dogs = dogs;
+    }
+
+    /**
+     * keep track of elements in the dogs array
+     */
+    private int nextIndex = 0;
+
+    public void addDog(Dog dog) {
+        if (nextIndex < dogs.length) {
+            if (dog.hasOwner()) {
+                System.out.println("Cannot add " + dog.getDogName() + " to " + this.getName() + ": already has an owner");
+            } else {
+                dogs[nextIndex++] = dog;
+                dog.setOwner(this);
+            }
+        } else {
+            System.out.println("Cannot add " + dog.getDogName() + ": " + this.getName() + " already has the maximum of 5 dogs");
+        }
     }
 }

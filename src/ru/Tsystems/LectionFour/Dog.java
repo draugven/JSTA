@@ -9,42 +9,49 @@ class Dog {
     private String breed;
     private Owner owner;
 
-    void setDogName(String setDogName) {
-        dogName = setDogName;
-    }
-
-    String getDogName() {
+    public String getDogName() {
         return dogName;
     }
 
-    void setAge (int setAge) {
-        age = setAge;
+    public void setDogName(String dogName) {
+        this.dogName = dogName;
     }
 
-    int getAge() {
+    public int getAge() {
         return age;
     }
 
-    void setBreed (String setBreed) {
-        breed = setBreed;
+    public void setAge(int age) {
+        this.age = age;
     }
 
-    String getBreed() {
+    public String getBreed() {
         return breed;
     }
 
-    void setOwner(Owner newOwner) {
-        if (owner != null) {
-            System.out.println("Unable to add " + newOwner.getName() + " as an owner: " + this.dogName + " already has an owner");
-        } else {
-            owner = newOwner;
-        }
+    public void setBreed(String breed) {
+        this.breed = breed;
     }
 
     Owner getOwner() {
         return owner;
     }
 
+    public void setOwner(Owner newOwner) {
+        if (hasOwner()) {
+            System.out.println("Unable to add " + newOwner.getName() + " as an owner: " + this.dogName + " already has an owner");
+        } else {
+            owner = newOwner;
+        }
+    }
+
+    public boolean hasOwner() {
+        return owner != null;
+    }
+
+    /**
+     * Dog barks
+     */
     void bark() {
         System.out.println(this.getDogName() + " said bark, bark!");
     }
