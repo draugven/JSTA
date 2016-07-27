@@ -1,4 +1,4 @@
-package ru.Tsystems.LectionFour;
+package ru.Tsystems.lectionFour;
 
 /**
  * Created by enaimark on 27.07.2016.

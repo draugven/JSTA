@@ -1,4 +1,4 @@
-package ru.Tsystems.LectionTwo;
+package ru.Tsystems.lectionTwo;
 
 /**
  * Created by enaimark on 18.07.2016.

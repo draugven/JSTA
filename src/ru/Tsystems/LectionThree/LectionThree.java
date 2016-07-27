@@ -1,4 +1,4 @@
-package ru.Tsystems.LectionThree;
+package ru.Tsystems.lectionThree;
 
 import static java.lang.System.out;
 
