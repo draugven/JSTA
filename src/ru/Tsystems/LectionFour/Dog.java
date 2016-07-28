@@ -4,17 +4,17 @@ package ru.Tsystems.lectionFour;
  * Created by enaimark on 27.07.2016.
  */
 class Dog {
-    private String dogName;
+    private String name;
     private int age;
     private String breed;
     private Owner owner;
 
-    public String getDogName() {
-        return dogName;
+    public String getName() {
+        return name;
     }
 
-    public void setDogName(String dogName) {
-        this.dogName = dogName;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public int getAge() {
@@ -39,7 +39,7 @@ class Dog {
 
     public void setOwner(Owner newOwner) {
         if (hasOwner()) {
-            System.out.println("Unable to add " + newOwner.getName() + " as an owner: " + this.dogName + " already has an owner");
+            System.out.println("Unable to add " + newOwner.getName() + " as an owner: " + this.name + " already has an owner");
         } else {
             owner = newOwner;
         }
@@ -53,7 +53,7 @@ class Dog {
      * Dog barks
      */
     void bark() {
-        System.out.println(this.getDogName() + " said bark, bark!");
+        System.out.println(this.getName() + " said bark, bark!");
     }
 
 }

@@ -4,9 +4,9 @@ package ru.Tsystems.lectionFour;
  * Created by Elizaveta Naimark on 28.07.2016.
  */
 public class Print {
-    private static Boolean isEmpty = true;
+    private static boolean isEmpty = true;
 
-    private static Boolean getIsEmpty(Owner owner) {
+    private static boolean getIsEmpty(Owner owner) {
         for (int i = 0; i < owner.getDogs().length; i++) {
             if (owner.getDogs()[i] != null) {
                 isEmpty = false;
@@ -23,7 +23,7 @@ public class Print {
     private static void printDogsList(Owner owner) {
         for (int i = 0; i < owner.getDogs().length; i++) {
             if (owner.getDogs()[i] != null) {
-                System.out.print(owner.getDogs()[i].getDogName());
+                System.out.print(owner.getDogs()[i].getName());
                 if (owner.getDogs()[i + 1] != null) {
                     System.out.print(", ");
                 } else {
@@ -35,10 +35,10 @@ public class Print {
 
     static void printDogsListForOwner(Owner owner) {
         System.out.print(owner.getName() + "'s dogs are: ");
-        if (Print.getIsEmpty(owner)) {
-            Print.printNoDogs();
+        if (getIsEmpty(owner)) {
+            printNoDogs();
         } else {
-            Print.printDogsList(owner);
+            printDogsList(owner);
         }
         System.out.println("");
     }

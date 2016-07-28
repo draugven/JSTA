@@ -31,13 +31,13 @@ class Owner {
     public void addDog(Dog dog) {
         if (nextIndex < dogs.length) {
             if (dog.hasOwner()) {
-                System.out.println("Cannot add " + dog.getDogName() + " to " + this.getName() + ": already has an owner");
+                System.out.println("Cannot add " + dog.getName() + " to " + getName() + ": already has an owner");
             } else {
                 dogs[nextIndex++] = dog;
                 dog.setOwner(this);
             }
         } else {
-            System.out.println("Cannot add " + dog.getDogName() + ": " + this.getName() + " already has the maximum of 5 dogs");
+            System.out.println("Cannot add " + dog.getName() + ": " + getName() + " already has the maximum of 5 dogs");
         }
     }
 }

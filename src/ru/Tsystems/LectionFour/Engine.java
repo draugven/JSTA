@@ -8,41 +8,41 @@ public class Engine {
 
         Dog sparky = new Dog();
 
-        sparky.setDogName("Sparky");
+        sparky.setName("Sparky");
         sparky.setAge(5);
         sparky.setBreed("UNKNOWN");
 
         Dog buddy = new Dog();
 
-        buddy.setDogName("Buddy");
+        buddy.setName("Buddy");
         buddy.setAge(3);
         buddy.setBreed("HUSKY");
 
         Dog daisy = new Dog();
 
-        daisy.setDogName("Daisy");
+        daisy.setName("Daisy");
         daisy.setAge(4);
         daisy.setBreed("GERMAN SHEPHERD");
 
         Dog max = new Dog();
 
-        max.setDogName("Max");
+        max.setName("Max");
         max.setAge(3);
         max.setBreed("UNKNOWN");
 
         Dog charlie = new Dog();
 
-        charlie.setDogName("Charlie");
+        charlie.setName("Charlie");
         charlie.setAge(2);
         charlie.setBreed("PUG");
 
         Dog edward = new Dog();
 
-        edward.setDogName("Edward");
+        edward.setName("Edward");
         edward.setAge(7);
         edward.setBreed("UNKNOWN");
 
-//        System.out.println("Sparky: name=" + sparky.getDogName() + "; age=" + sparky.getAge() + "; breed=" + sparky.getBreed());
+//        System.out.println("Sparky: name=" + sparky.getName() + "; age=" + sparky.getAge() + "; breed=" + sparky.getBreed());
 
         Owner bill = new Owner();
 
